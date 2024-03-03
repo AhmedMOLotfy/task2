@@ -1,0 +1,48 @@
+<div class="container pt-5">
+  <form action="" (ngSubmit)="Submit()" [formGroup]="profileForm">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter firstName"
+        formControlName="firstName">
+      <label for="floatingInput">firstName</label>
+
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter lastName"
+        formControlName="lastName">
+      <label for="floatingInput">Enter lastName</label>
+
+    </div>
+
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter gender" formControlName="gender">
+      <label for="floatingInput">Enter gender</label>
+
+    </div>
+
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter email" formControlName="email">
+      <label for="floatingInput">Enter email</label>
+
+    </div>
+
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter phone" formControlName="phone">
+      <label for="floatingInput">Enter phone</label>
+
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter university"
+        formControlName="university">
+      <label for="floatingInput">Enter university</label>
+
+    </div>
+
+
+    <button class="btn btn-dark">Submit</button>
+  </form>
+</div>

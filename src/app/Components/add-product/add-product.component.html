@@ -1,0 +1,44 @@
+<div class="container">
+  <form action="" (ngSubmit)="Addprd()" #prdForm="ngForm">
+    <div class="form-floating mb-3">
+
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name" name="name" required
+        [(ngModel)]="newPrd.title" #inpName="ngModel">
+      <label for="floatingInput">Title</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter description" name="description"
+        required [(ngModel)]="newPrd.description" #inpName="ngModel">
+      <label for="floatingInput">description</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Enter category" name="category" required
+        [(ngModel)]="newPrd.category" #inpName="ngModel">
+      <label for="floatingInput">category</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="number" class="form-control" id="floatingInput" placeholder="Enter price" name="price" required
+        [(ngModel)]="newPrd.price" #inpName="ngModel">
+      <label for="floatingInput">price</label>
+    </div>
+
+    <button class="btn btn-dark" [disabled]="prdForm.invalid">Submit</button>
+  </form>
+</div>
+<!--
+
+  "id": 1,
+  "title": "iPhone 9",
+  "description": "An apple mobile which is nothing like apple",
+  "price": 549,
+  "discountPercentage": 12.96,
+  "rating": 4.69,
+  "stock": 94,
+  "brand": "Apple",
+  "category": "smartphones",
+  "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+  "images": [
+  "https://cdn.dummyjson.com/product-images/1/1.jpg",
+  "https://cdn.dummyjson.com/product-images/1/2.jpg",
+
+ -->

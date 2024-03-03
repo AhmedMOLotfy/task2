@@ -1,0 +1,13 @@
+<div class="container d-flex justify-content-center mt-5">
+
+  <label class="form-label me-4">category</label>
+  <select style="width: 50%;" aria-label="Default select example" [(ngModel)]="selectedId">
+    <option *ngFor="let cat of catList" [value]="cat.name">{{cat.name}}</option>
+  </select>
+</div>
+
+
+<h2 class="text-center">Total Price : {{cartPrice | currency}}</h2>
+
+<!-- [SendId]="SelectedId" (TotalPriceOutPut)="OnTotalPrice($event)" -->
+<app-product [sendCatName]="selectedId" (TotalPriceOut)="onBuy($event)"></app-product>

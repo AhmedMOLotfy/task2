@@ -1,0 +1,20 @@
+.card {
+  border-radius: 10px; /* Add subtle border radius for a more modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+.card-img-top {
+  object-fit: cover; /* Ensure image fills the card container */
+}
+.card-body {
+  padding: 20px; /* Adjust padding for better spacing */
+}
+.card-title {
+  font-weight: bold; /* Emphasize product title */
+}
+.card-text {
+  line-height: 1.5; /* Improve readability with slightly larger line spacing */
+}
+.btn-primary {
+  background-color: #2196f3; /* Customize button color (optional) */
+  border-color: #2196f3; /* Match button color for a seamless look */
+}

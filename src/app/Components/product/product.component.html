@@ -1,0 +1,22 @@
+<div class="cards-ls pt-5">
+  <div class="container">
+    <a class="ms-5 mb-5 btn bg-dark text-white" (click)="goToAdd()">Add</a>
+    <div class="row justify-content-center gap-3">
+      <div appShadow [ngStyle]="{'backgroundColor': pro.stock === 1 ? 'yellow' : ''}" class="card col-md-4 p-0"
+        style="width: 18rem;" *ngFor="let pro of filteredList" [hidden]="pro.stock === 0">
+        <img class="card-img-top" src="{{pro.images[0]}}" alt="Card image cap" style=" height: 250px;">
+        <div class="card-body">
+          <h5 class="card-title">{{pro.title}}</h5>
+          <p class="card-text" style="min-height: 90px;">{{pro.description}}</p>
+          <p class="card-text">{{pro.category}}</p>
+          <p class="card-text">Price: {{pro.price | currency}}</p>
+          <label>Quantity: </label><input name="qty" #qty id="qty" type="number" class="form-control mt-1">
+          <a class="btn btn-primary bg-dark d-block mt-3" (click)="addToCart(+qty.value,pro.price)">buy</a>
+          <a class="btn btn-primary bg-dark d-block mt-3" routerLink="/product/{{pro.id}}">Details</a>
+          <a class="btn btn-primary bg-dark d-block mt-3" (click)="deleteProduct(pro.id)">delete</a>
+          <a class="btn btn-primary bg-dark d-block mt-3" (click)="gotoEditProduct(pro.id)">edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

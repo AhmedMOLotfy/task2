@@ -1,0 +1,20 @@
+<ng-container *ngIf="product">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-0">
+          <img class="card-img-top" src="{{product.images[0]}}" alt="Card image cap" style="height: 200px;">
+          <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text" style="min-height: 90px;">{{product.description}}</p>
+            <p class="card-text">{{product.category}}</p>
+            <p class="card-text">Price: {{product.price | currency}}</p>
+            <label>Quantity: </label>
+            <input type="number" class="form-control mt-1" name="qty" id="qty">
+            <a href="#" class="btn btn-primary d-block mt-3">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

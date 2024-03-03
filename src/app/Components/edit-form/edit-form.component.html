@@ -1,0 +1,29 @@
+<ng-container *ngIf="product">
+  <div class="container">
+    <form action="" (ngSubmit)="editProduct()" #prdForm="ngForm">
+      <div class="form-floating mb-3">
+
+        <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name" name="name" required
+          [(ngModel)]="product.title" value="{{product.title}}" #inpName="ngModel">
+        <label for="floatingInput">Title</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Enter description" name="description"
+          required [(ngModel)]="product.description" value="{{product.description}}" #inpName="ngModel">
+        <label for="floatingInput">description</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Enter category" name="category" required
+          [(ngModel)]="product.category" value="{{product.category}}" #inpName="ngModel">
+        <label for="floatingInput">category</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="floatingInput" placeholder="Enter price" name="price" required
+          [(ngModel)]="product.price" value="{{product.price}}" #inpName="ngModel">
+        <label for="floatingInput">price</label>
+      </div>
+
+      <button class="btn btn-dark" [disabled]="prdForm.invalid">Submit</button>
+    </form>
+  </div>
+</ng-container>
